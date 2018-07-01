@@ -1,0 +1,29 @@
+{
+  "name": "themoviedb-graphql-binding",
+  "version": "0.1.0",
+  "description": "GraphQL bindings for Movie DB",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "node example/index.js",
+    "prepare": "yarn run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "arjunrao87",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "graphql-binding": "^2.1.1",
+    "graphql-tools": "^3.0.4",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "graphql-yoga": "^1.14.10"
+  }
+}
