@@ -1,3 +1,2 @@
-import TheMovieDBBinding from "./binding"
-
-export default TheMovieDBBinding;
+import binding from "./binding"
+export default binding

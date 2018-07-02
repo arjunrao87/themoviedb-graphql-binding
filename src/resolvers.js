@@ -1,5 +1,4 @@
 require("babel-polyfill");
-
 import rp from "request-promise"
 
 const BASE_URL = "https://api.themoviedb.org/3/"
