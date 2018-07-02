@@ -20,13 +20,8 @@ const resolvers = {
     }
 };
 
-const searchByName = ( name, apiKey ) => {
-    return query(`${BASE_URL}search/movie?api_key=${apiKey}&query=${name}`);
-}
-
-const searchByID = ( id, apiKey ) => {
-    return query(`${BASE_URL}movie/${id}?api_key=${apiKey}&append_to_response=videos`);
-}
+const searchByName = ( name, apiKey ) => query(`${BASE_URL}search/movie?api_key=${apiKey}&query=${name}`);
+const searchByID = ( id, apiKey ) => query(`${BASE_URL}movie/${id}?api_key=${apiKey}&append_to_response=videos`);
 
 const query = url => {
     return rp({
