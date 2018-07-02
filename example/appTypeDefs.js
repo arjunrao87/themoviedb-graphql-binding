@@ -2,7 +2,7 @@ const appTypeDefs =
 `
 type Query {
   hello(name: String): String!
-  movie(name: String): MovieBasic
+  movie(name: String): [MovieBasic]
 }
 `
 

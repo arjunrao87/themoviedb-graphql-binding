@@ -13,11 +13,16 @@ const resolvers = {
         context["apiKey"] = process.env.THE_MOVIEDB_API_KEY;
         return binding.query
                       .searchByName({name: args.name}, info, {context})
-                      .then(result => console.log(result))
+                      .then(result => result)
                       .catch((error) => {console.log(error)});
       },
     },
 }
 
-const server = new GraphQLServer({ resolvers, typeDefs:mergedTypeDefs })
+const server = new GraphQLServer({  resolvers, 
+                                    typeDefs: mergedTypeDefs,  
+                                    resolverValidationOptions :{
+                                      requireResolversForResolveType: false
+                                    }
+                                 })
 server.start(() => console.log('Server running on http://localhost:4000'))
