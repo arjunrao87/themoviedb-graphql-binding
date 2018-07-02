@@ -1,5 +1,3 @@
-const typeDefs = 
-`
 interface Movie {
     id: ID!
     adult: Boolean
@@ -106,5 +104,3 @@ type Query{
     searchByName( name: String! ) : [MovieBasic]
     searchByID  ( id : String! )  : MovieDetail
 }
-`;
-export default typeDefs

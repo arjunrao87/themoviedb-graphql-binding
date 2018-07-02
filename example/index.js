@@ -1,21 +1,16 @@
 require("dotenv").config();
 
 const { GraphQLServer } = require('graphql-yoga')
-const TheMovieDBBinding = require('../dist')
+const binding = require('../dist')
 const typeDefs = require("./typedefs")
-
-const token = process.env.THE_MOVIEDB_API_KEY || ''
 
 const resolvers = {
     Query: {
       hello: (parent, { name }) => `Hello ${name || 'World'}!`,
-      movie: (parent, { name }, context, info) => {
-        const input = `
-          input:{
-            name: ${name || "Senegal"}
-          }
-        `
-        return TheMovieDBBinding.query.movie(input, info);
+      movie: (parent, { name }, context) => {
+        context["apiKey"] = process.env.THE_MOVIEDB_API_KEY || '';
+        const input = `name: ${name || "Senegal"}`
+        return binding.query.searchByName(input, context);
       },
     },
 }
