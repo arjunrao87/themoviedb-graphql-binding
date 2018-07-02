@@ -27,5 +27,21 @@
     "babel-preset-env": "^1.6.0",
     "graphql-yoga": "^1.14.10",
     "themoviedb-graphql-binding": "^0.2.0"
-  }
+  },
+  "keywords": [
+    "movies",
+    "ratings",
+    "moviedb",
+    "database",
+    "graphql",
+    "binding",
+    "prisma",
+    "apollo",
+    "api",
+    "documentaries",
+    "documentary",
+    "movie",
+    "ratings"
+  ]
+
 }
