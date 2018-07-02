@@ -2558,6 +2558,16 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+themoviedb-graphql-binding@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/themoviedb-graphql-binding/-/themoviedb-graphql-binding-0.2.0.tgz#a43d51869a2f39df7c9b85d0f444c17b5335a283"
+  dependencies:
+    dotenv "^6.0.0"
+    graphql-binding "^2.1.1"
+    graphql-tools "^3.0.4"
+    request "^2.87.0"
+    request-promise "^4.2.2"
+
 to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"

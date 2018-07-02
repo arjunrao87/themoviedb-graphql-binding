@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const { GraphQLServer } = require('graphql-yoga')
-const binding = require('../dist/').default
+const binding = require('themoviedb-graphql-binding/dist').default
 const appTypeDefs = require("./appTypeDefs")
 const movieTypeDefs = require("./theMovieDBTypeDefs")
 const mergedTypeDefs = `${appTypeDefs}${movieTypeDefs}`
